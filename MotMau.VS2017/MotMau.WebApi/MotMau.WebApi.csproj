@@ -16,4 +16,10 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MotMau.Core\MotMau.Core.csproj" />
+    <ProjectReference Include="..\MotMau.Data\MotMau.Data.csproj" />
+    <ProjectReference Include="..\MotMau.Services\MotMau.Services.csproj" />
+  </ItemGroup>
+
 </Project>

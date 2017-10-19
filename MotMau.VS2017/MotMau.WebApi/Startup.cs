@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MotMau.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace MotMau.WebApi
 {
@@ -23,6 +25,9 @@ namespace MotMau.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Inject for datacontext
+            services.AddDbContext<MotMauDataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MotMauDataConnection")));
+
             services.AddMvc();
         }
 
