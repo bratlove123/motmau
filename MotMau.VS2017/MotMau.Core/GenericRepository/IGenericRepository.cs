@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MotMau.Core.Repository
 {
-    public partial interface IRepository<T> where T : EntityBase
+    public partial interface IGenericRepository<T> where T : EntityBase
     {
         /// <summary>
         /// Get entity by identifier

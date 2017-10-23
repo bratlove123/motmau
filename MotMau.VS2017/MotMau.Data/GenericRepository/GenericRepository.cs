@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace MotMau.Core.Repository
 {
-    public partial class Repository<T> : IRepository<T> where T : EntityBase
+    public partial class GenericRepository<T> : IGenericRepository<T> where T : EntityBase
     {
         private readonly DbContext _context;
         private DbSet<T> _entities;
 
-        public Repository(MotMauDataContext context)
+        public GenericRepository(MotMauDataContext context)
         {
             _context = context;
             _entities = context.Set<T>();

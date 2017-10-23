@@ -5,7 +5,7 @@ using MotMau.Core.Domain;
 
 namespace MotMau.Services.Product
 {
-    public class ProductRepository : IProductRepository
+    public class ProductService : IProductService
     {
         public Core.Domain.Product GetFirstProduct()
         {
