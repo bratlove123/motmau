@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MotMau.Core\MotMau.Core.csproj" />
+    <ProjectReference Include="..\MotMau.Data\MotMau.Data.csproj" />
+  </ItemGroup>
+
 </Project>
