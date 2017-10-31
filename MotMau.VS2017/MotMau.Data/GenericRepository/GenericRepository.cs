@@ -45,7 +45,7 @@ namespace MotMau.Core.Repository
             }
         }
 
-        public virtual T GetById(object id)
+        public virtual T GetById(string id)
         {
             return _entities.Find(id);
         }

@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MotMau.Core", "MotMau.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MotMau.Data", "MotMau.Data\MotMau.Data.csproj", "{9C5C14B4-24CF-4334-BA3C-84E84DF3D8AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MotMau.Services", "MotMau.Services\MotMau.Services.csproj", "{7FD6A42E-BFC4-4A76-A741-2F2F9695EAD8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MotMau.WebApi", "MotMau.WebApi\MotMau.WebApi.csproj", "{EEC605C2-5C36-4786-AC23-5FC725C29D87}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{9C5C14B4-24CF-4334-BA3C-84E84DF3D8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C5C14B4-24CF-4334-BA3C-84E84DF3D8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C5C14B4-24CF-4334-BA3C-84E84DF3D8AE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7FD6A42E-BFC4-4A76-A741-2F2F9695EAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7FD6A42E-BFC4-4A76-A741-2F2F9695EAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7FD6A42E-BFC4-4A76-A741-2F2F9695EAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7FD6A42E-BFC4-4A76-A741-2F2F9695EAD8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EEC605C2-5C36-4786-AC23-5FC725C29D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EEC605C2-5C36-4786-AC23-5FC725C29D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEC605C2-5C36-4786-AC23-5FC725C29D87}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MotMau.Data;
 using Microsoft.EntityFrameworkCore;
+using MotMau.Data.UnitOfWork;
 
 namespace MotMau.WebApi
 {
@@ -28,6 +29,8 @@ namespace MotMau.WebApi
             //Inject for datacontext
             services.AddDbContext<MotMauDataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MotMauDataConnection")));
 
+            //Inject unit of work
+            services.AddSingleton<IUnitOfWork, UnitOfWork>();
             services.AddMvc();
         }
 

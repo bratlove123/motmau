@@ -15,7 +15,7 @@ namespace MotMau.Core.Repository
         /// </summary>
         /// <param name="id">Identifier</param>
         /// <returns>Entity</returns>
-        T GetById(object id);
+        T GetById(string id);
 
         /// <summary>
         /// Insert entity
