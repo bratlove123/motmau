@@ -11,6 +11,8 @@ using Microsoft.Extensions.Options;
 using MotMau.Data;
 using Microsoft.EntityFrameworkCore;
 using MotMau.Data.UnitOfWork;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
 
 namespace MotMau.WebApi
 {
@@ -31,6 +33,32 @@ namespace MotMau.WebApi
 
             //Inject unit of work
             services.AddSingleton<IUnitOfWork, UnitOfWork>();
+
+            //Inject itentity
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = "JwtBearer";
+                options.DefaultChallengeScheme = "JwtBearer";
+            })
+            .AddJwtBearer("JwtBearer", jwtBearerOptions =>
+            {
+                jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MotMau")),
+
+                    ValidateIssuer = true,
+                    ValidIssuer = "MotMau",
+
+                    ValidateAudience = true,
+                    ValidAudience = "MotMau",
+
+                    ValidateLifetime = true,
+
+                    ClockSkew = TimeSpan.FromMinutes(5)
+                };
+            });
+
             services.AddMvc();
         }
 
@@ -41,7 +69,7 @@ namespace MotMau.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseAuthentication();
             app.UseMvc();
         }
     }
