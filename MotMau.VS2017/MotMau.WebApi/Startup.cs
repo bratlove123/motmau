@@ -45,13 +45,11 @@ namespace MotMau.WebApi
                 jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MotMau")),
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MotMauHouseSecretKey")),
 
-                    ValidateIssuer = true,
-                    ValidIssuer = "MotMau",
+                    ValidateIssuer = false,
 
-                    ValidateAudience = true,
-                    ValidAudience = "MotMau",
+                    ValidateAudience = false,
 
                     ValidateLifetime = true,
 

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using MotMau.Data.UnitOfWork;
 using MotMau.Data;
 using MotMau.Core.Domain;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MotMau.WebApi.Controllers
 {
@@ -22,6 +23,7 @@ namespace MotMau.WebApi.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IEnumerable<Product> GetProducts()
         {
             return _unitOfWork.ProductRepo.Table;
